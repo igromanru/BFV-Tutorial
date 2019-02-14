@@ -27,11 +27,10 @@
 #define checkSetting(teamval, enemyval) (((pLocalPlayer->teamId == pPlayer->teamId) && teamval) || ((pLocalPlayer->teamId != pPlayer->teamId) && enemyval))
 
 // be lazy and paste colors
-
 #define pasteColor(x) x.r, x.g, x.b
 #define pasteColorA(x) x.r, x.g, x.b, x.a
 
-// chance these settings to you liking
+// chance these settings to your liking
 namespace Settings {
 	// our colors to set players to
 	D3DXCOLOR teamColor = D3DXCOLOR(0, 255, 0, 255);
@@ -138,8 +137,8 @@ void drawLoop(Dxo* dxo, int width, int height) {
 		// hardcode a head height offset, based on pose
 
 		// poseType 0 = standing
-		// poseType 0 = crouching
-		// poseType 0 = prone
+		// poseType 1 = crouching
+		// poseType 2 = prone
 		if (pSoldier->poseType == 0) headLocation.y += 1.6;
 		if (pSoldier->poseType == 1) headLocation.y += 1;
 		if (pSoldier->poseType == 2) headLocation.y += .5;
